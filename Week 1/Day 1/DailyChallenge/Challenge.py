@@ -18,7 +18,6 @@ list_st = list(string_user)
 random.shuffle(list_st)
 swap_string = ("".join(list_st))
 
-
 def daily_challenge (len, string_user): 
     result = ""
     if len_string_user == 10:
