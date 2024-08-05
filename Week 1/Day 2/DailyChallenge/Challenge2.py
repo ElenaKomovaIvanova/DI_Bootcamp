@@ -9,6 +9,7 @@
 list_input = list(input("Enter a string:"))
 i=0
 
+
 while i < len(list_input)-1:
     if list_input[i] == list_input[i + 1]:
             list_input.pop(i)
