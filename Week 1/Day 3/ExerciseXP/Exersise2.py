@@ -14,19 +14,29 @@
 # Bonus: Ask the user to input the names and ages instead of using the provided family variable 
 # (Hint: ask the user for names and ages and add them into a family dictionary that is initially empty).
 
-family = {"Rick": 43, 'Beth': 13, 'Morty': 5, 'Summer': 8}
-total_price = 0
+def total_price (dict):
+        total_price = 0
+        for key in dict:
+            if dict[key] <3:
+                print(f"{key}'s ticket costs: 0")
+            elif 3 < dict[key] <= 12:
+                print(f"{key}'s ticket costs: 10")
+                total_price += 10
+            elif dict[key] > 12:
+                print(f"{key}'s ticket costs: 12")
+                total_price += 12
+        return total_price
 
-for key in family:
-    if family[key] <3:
-     print(f"{key}'s ticket costs: 0")
-    elif 3 < family[key] <= 12:
-       print(f"{key}'s ticket costs: 10")
-       total_price += 10
-    elif family[key] > 12:
-       print(f"{key}'s ticket costs: 12")
-       total_price += 12
+family = {"Rick": 2, 'Beth': 13, 'Morty': 5, 'Summer': 8}
+family_input = {}
+name = ""
 
-print(total_price)
+while name !="exit":
+     name = (input("Please,enter your name: "))
+     if name == "exit":
+        break
+     age = int((input("Please,enter your age: ")))
+     family_input[name] = age   
 
-
+print(total_price(family))
+print(total_price(family_input))
