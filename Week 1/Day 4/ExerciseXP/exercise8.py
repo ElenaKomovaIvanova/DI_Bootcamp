@@ -51,8 +51,10 @@ res = questions(data)
 def print_incorrect_answer(incorrect_answer = dict):
     if len(incorrect_answer) < 3:
        for key, value in incorrect_answer.items():
-           print(f"You have {len(incorrect_answer)} errors: {key}: {value}")
-    else: print("Do you have more than three errors? Want to play again?")
+           print(f"Number of incorrect answers {len(incorrect_answer)} : {key}: {value}")
+    else: print("Do you have more than three errors? Want to play again? Y or N ")
+       
+    
 
 
 print(f'''You have {res[0]} correct answers!!!!''')
