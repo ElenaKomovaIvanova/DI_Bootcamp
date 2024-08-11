@@ -20,25 +20,15 @@ class Farm():
         return sorted(self.animals.keys())
     
     def get_short_info(self):
-        short_info = "McDonald’s farm has "
-        
-        list_type_animals = self.get_animal_types()
-        for i in range(len(list_type_animals)):
-            if i == (len(list_type_animals) - 1) and self.animals[list_type_animals[i]] > 1:
-               short_info += f" and {list_type_animals[i]}s."  
-            elif self.animals[list_type_animals[i]] > 1: 
-                short_info += f" {list_type_animals[i]}s,"
-
-            if i == (len(list_type_animals) - 1) and self.animals[list_type_animals[i]] == 1:
-               short_info += f" and {list_type_animals[i]}."
-            elif self.animals[list_type_animals[i]] == 1: short_info += f" {list_type_animals[i]}s,"
-        return short_info    
-           
+        list_get_animals = self.get_animal_types()
+        list_print_animals = [f"{animal}s" if self.animals[animal] > 1 else f"{animal}" for animal in list_get_animals]
+        return f"{self.name}'s farm has {', '.join(list_print_animals[:len(list_get_animals) - 1])} and {list_print_animals[-1]}."
+               
 macdonald = Farm("McDonald")
 macdonald.add_animal('cow',5)
 macdonald.add_animal('sheep')
-macdonald.add_animal('goat', 12)
 macdonald.add_animal('sheep')
+macdonald.add_animal('goat', 12)
 
 print(macdonald.get_info())
 print(macdonald.get_animal_types())
