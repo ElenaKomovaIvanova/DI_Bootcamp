@@ -21,7 +21,9 @@ class Farm():
     
     def get_short_info(self):
         list_get_animals = self.get_animal_types()
+
         list_print_animals = [f"{animal}s" if self.animals[animal] > 1 else f"{animal}" for animal in list_get_animals]
+
         return f"{self.name}'s farm has {', '.join(list_print_animals[:len(list_get_animals) - 1])} and {list_print_animals[-1]}."
                
 macdonald = Farm("McDonald")
