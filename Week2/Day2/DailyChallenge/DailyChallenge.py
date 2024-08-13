@@ -1,7 +1,7 @@
 import math
 
 
-class Pagination():
+class Pagination:
 
 
     def __init__(self, items = None, pageSize = 10) -> None:
