@@ -30,11 +30,10 @@ class AnagramChecker:
         
     def get_anagrams(self, word):
         results = []
-        word_counter = Counter(word) 
-        for i in range(0,len(self.valid_words)):
-            if len(self.valid_words[i]) == len(word) and all(letter in self.valid_words[i] for letter in word) and Counter(self.valid_words[i]) == word_counter:
-                results.append(self.valid_words[i])
-                i +=1
+        sorted_word = sorted(word)
+        for valid_word in self.valid_words:
+                if sorted_word == sorted(valid_word):
+                   results.append(valid_word)
         return results
       
 
