@@ -90,10 +90,10 @@
 -- WHERE film_id NOT IN (SELECT film_id FROM inventory);
 
 -- Write a query to find which city is in which country.
--- SELECT city.city, country.country FROM city
--- LEFT OUTER JOIN country
--- ON city.country_id = country.country_id
--- ORDER BY country.country;
+SELECT city.city, country.country FROM city
+LEFT OUTER JOIN country
+ON city.country_id = country.country_id
+ORDER BY country.country;
 
 
 
