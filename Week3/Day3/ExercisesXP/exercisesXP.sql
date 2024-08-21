@@ -124,7 +124,7 @@ INNER JOIN (
     FROM payment AS p
     INNER JOIN customer AS c
     ON p.customer_id = c.customer_id
-    WHERE p.amount > 4
+    WHERE p.amount > 4.00
     AND c.last_name = 'Mahan'
     AND c.first_name = 'Matthew'
 ) AS cp
