@@ -11,16 +11,18 @@ if (wordNot !== -1 && wordBad !== -1 && wordNot < wordBad) {
     console.log(sentence)
 }
 
-const letter1 = '*'
-for (let i = 1; i < 7; i++) {
-    let result = letter1.repeat(i)
-    console.log(result)
-}
+const letter = '*';
+// for (let i = 1; i < 7; i++) {
+//     let result = letter.repeat(i)
+//     console.log(result)
+// }
 
-const letter = '*'
-let result = letter
-for(let y = 2; y < 8 ; y++) {
-    for (let x = 1; x < 2; x = 2){
-        console.log(result)}       
-result = letter.repeat(y)
+let result = '';
+for(let y = 1; y < 7 ; y++) {
+    for (let x = 1; x <= y; x++){
+        result += letter;
+    }       
+    result += '\n';
 }
+console.log(result);
+
