@@ -1,10 +1,10 @@
 const planets = [
-    { name: 'Mercury', color: 'gray', moons: 0 },
+    { name: 'Mercury', color: 'darkblue', moons: 0 },
     { name: 'Venus', color: 'yellow', moons: 0 },
     { name: 'Earth', color: 'green', moons: 1 },
     { name: 'Mars', color: 'red', moons: 2 },
     { name: 'Jupiter', color: 'orange', moons: 79 },
-    { name: 'Saturn', color: 'goldenrod', moons: 83 },
+    { name: 'Saturn', color: 'gray', moons: 83 },
     { name: 'Uranus', color: 'lightblue', moons: 27 },
     { name: 'Neptune', color: 'blue', moons: 14 },
     { name: 'Pluto', color: 'purple', moons: 4 },
