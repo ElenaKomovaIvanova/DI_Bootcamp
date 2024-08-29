@@ -1,0 +1,52 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    background-image: linear-gradient(to bottom right, rgb(219, 115, 248), rgb(188, 228, 245)); 
+    flex-direction: column;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    background-color: #fff; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    max-width: 600px; 
+    width: 100%; 
+    height: auto; 
+}
+
+.listTasks {
+    margin-top: 20px; 
+    width: 100%; 
+}
+
+.task-container {
+    display:flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    background-color: #ffffff;
+    font-size: 20px;
+}
+
+.remove-button  {
+    font-family: 'Material Symbols Outlined'; 
+    font-size: 20px; 
+    color: #c20c0c;
+    border: none; 
+    background: none; 
+    cursor: pointer; 
+    margin-bottom: 1px;
+}
+
+.completed {
+    text-decoration: line-through; 
+    color: gray; 
+}
