@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(176, 158, 153);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            border-style: groove;
+        }
+
+        #form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(216, 207, 204);
+            width: 30vw;
+            height: 30vw;
+            padding: 20pt;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+            color: rgb(108, 117, 125);
+            border-style: groove;
+            margin: 20px;
+        }
+
+        .button {
+            margin: 20px;
+            background-color: rgb(100, 182, 172);
+            font-size: medium;
+            color: floralwhite;
+            border-style: groove;
+            border-color: rgb(106, 163, 232);
+        }
+
+        #author {
+            text-align: right;
+            color: rgb(101, 183, 178);
+        }
+
+        #inputQuote {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(216, 207, 204);
+            width: 30vw;
+            height: 30vw;
+            padding: 20pt;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            color: rgb(108, 117, 125);
+            border-style: groove;
+            ;
+        }
+        #quoteText {
+            width: 200px;
+            height: 200px;
+            overflow: scroll;
+        }
+            
+
+    </style>
+</head>
+
+<body>
+    <div id=form>
+        <button id="button" class = "button" > Generate Quote </button>
+        <div>
+            <p id=quote></p>
+            <p id=author></p>
+        </div>
+    </div>
+    
+    <div>
+        <form id=inputQuote>
+            <label for="quoteText">Quote</label><br>
+            <textarea type="text" id="quoteText" name="quoteText"></textarea>
+
+            <label for="authorText">Author</label><br>
+            <input type="text" id="authorText" name="authorText"></input><br><br>
+
+            <button id="buttonInput" class = "button" type="submit"> Send </button>
+        </form>
+    </div>
+
+    <script src="randomQuoteGenerator.js"></script>
+</body>
+
+</html>
