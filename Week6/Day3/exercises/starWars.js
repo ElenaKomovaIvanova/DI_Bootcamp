@@ -47,21 +47,10 @@ function renderPerson(person) {
     gender.textContent = `Gender: ${person.gender}`;
     const birthYear = document.createElement('p');
     birthYear.textContent = `Birth Year: ${person.birth_year}`;
-    setTimeout(() => {
-        fildPerson.appendChild(name);
-    }, 500); // задержка в 1 секунду
-
-    setTimeout(() => {
-        fildPerson.appendChild(height);
-    }, 1000); // задержка в 2 секунды
-
-    setTimeout(() => {
-        fildPerson.appendChild(gender);
-    }, 1500); // задержка в 3 секунды
-
-    setTimeout(() => {
-        fildPerson.appendChild(birthYear);
-    }, 2000);
+    fildPerson.appendChild(name);
+    fildPerson.appendChild(height);
+    fildPerson.appendChild(gender);
+    fildPerson.appendChild(birthYear);
 }
-
+    
 document.querySelector('button').addEventListener('click', getRandomPerson);
