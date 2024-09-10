@@ -20,13 +20,14 @@ body {
     font-family: 'Helvetica Neue';
     font-size: 30px;
     color: aliceblue;
+    margin: 0;
 }
 
 #find {
     border-style: solid;
     border-radius: 5px;
     border-color: rgb(249, 238, 30);
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 h1 {
@@ -41,7 +42,8 @@ h3 {
     
 }
 
-p {
+#person > div {
     font-family: 'Helvetica Neue';
     font: bold;
+    flex-grow: 1;
 }

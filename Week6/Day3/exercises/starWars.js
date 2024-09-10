@@ -1,5 +1,6 @@
 const baseUrl = 'https://www.swapi.tech/api/people/';
 const fildPerson = document.getElementById('person');
+let homePlanet = 'Unknown'
 
 function loadPicture() {
     fildPerson.innerHTML = '';
@@ -30,27 +31,45 @@ async function getRandomPerson(event) {
         }
         const objectPerson = await response.json();
         console.log(objectPerson);
-        renderPerson(objectPerson.result.properties);
+        homePlanet = await getHomeWorld(objectPerson.result.properties.homeworld);
+        renderPerson(objectPerson.result.properties, homePlanet);
     } catch (error) {
         console.error('error:', error);
         showNotFoundMessage();
     }
 }
 
-function renderPerson(person) {
+async function getHomeWorld(url) {
+    try {
+        const response = await fetch(url);
+        if (response.status !== 200) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const objectHomeWorld = await response.json();
+        return objectHomeWorld.result.properties.name;
+        
+    } catch (error) {
+        console.error('error:', error);
+    }
+}
+
+function renderPerson(person, home) {
     fildPerson.innerHTML = '';
     const name = document.createElement('h3');
     name.textContent = person.name;
-    const height = document.createElement('p');
+    const height = document.createElement('div');
     height.textContent = `Height: ${person.height}`;
-    const gender = document.createElement('p');
+    const gender = document.createElement('div');
     gender.textContent = `Gender: ${person.gender}`;
-    const birthYear = document.createElement('p');
+    const birthYear = document.createElement('div');
     birthYear.textContent = `Birth Year: ${person.birth_year}`;
+    const homeWorld = document.createElement('div');
+    homeWorld.textContent = `Home World: ${home}`;
     fildPerson.appendChild(name);
     fildPerson.appendChild(height);
     fildPerson.appendChild(gender);
     fildPerson.appendChild(birthYear);
+    fildPerson.appendChild(homeWorld);
 }
-    
+
 document.querySelector('button').addEventListener('click', getRandomPerson);
