@@ -1,0 +1,49 @@
+body {
+    background-image: url('https://i.giphy.com/media/TxVVB6PfWMjE4/200.webp');
+}
+
+#main {
+    display: flex;
+    color: rgb(236, 215, 60);
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+
+}
+
+#person {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    width: 50vw;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(249, 238, 30);
+    align-items: center;
+    justify-content: flex-start;
+    font-family: 'Helvetica Neue';
+    font-size: 30px;
+    color: aliceblue;
+}
+
+#find {
+    border-style: solid;
+    border-radius: 5px;
+    border-color: rgb(249, 238, 30);
+    margin-top: 20px;
+}
+
+h1 {
+    font-family: 'Star Wars', sans-serif;
+    font-size: 10vh;
+}
+
+h3 {
+    font-family: 'Star Wars', sans-serif;
+    font-style: italic;
+}
+
+p {
+    font-family: 'Helvetica Neue';
+    font: bold;
+}

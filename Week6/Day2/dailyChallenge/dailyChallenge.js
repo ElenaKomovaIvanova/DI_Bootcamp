@@ -36,7 +36,9 @@ async function getRandomGif(event) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
         const objectGif = await response.json();
-        renderGif(objectGif.data.images.original.url);
+        console.log(objectGif);
+        
+        renderGif(objectGif.data.images.fixed_width.url);
     } catch (error) {
         console.error('error:', error);
     }
