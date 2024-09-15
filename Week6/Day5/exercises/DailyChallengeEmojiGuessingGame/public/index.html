@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration and Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome</h1>
+        <button type="button" id="startGame">Start the game</button>
+        <form id="userForm" class="hidden">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <button type="button" id="registerBtn">Register</button>
+            <button type="button" id="loginBtn">Login</button>
+        </form>
+        <div id="emojiDisplay" class="hidden">
+            <h2>Guess the Emoji!</h2>
+            <div id="emoji"></div>
+            <div id="options"></div>
+            <label for="score">Score:</label>
+            <output type="number" id="score"></output>
+            <button type="button" id="finishGame">Finish the game</button>
+        </div>
+    </div>
+    <script type="module" src="api.js"></script>
+    <script type="module" src="script.js"></script></script> 
+</body>
+</html>
