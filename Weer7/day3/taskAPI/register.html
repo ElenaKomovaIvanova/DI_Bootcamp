@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body {
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background-color: #f9f5cc; /* Светло-желтый */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px;
+            width: 100%;
+            background-color: #ffc107;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Register</h2>
+    <form id="registerForm">
+        <input name="firstName" type="text" id="firstName" placeholder="First Name" required>
+        <input name="lastName" type="text" id="lastName" placeholder="Last Name" required>
+        <input name="username" type="text" id="username" placeholder="Username" required>
+        <input name="email" type="email" id="email" placeholder="Email" required>
+        <input name="password" type="password" id="password" placeholder="Password" required>
+        <button type="submit" id="registerBtn" disabled>Register</button>
+    </form>
+    <output id="message"></output>
+
+    <script src="scriptReg.js"></script>
+</div>
+</body>
+</html>

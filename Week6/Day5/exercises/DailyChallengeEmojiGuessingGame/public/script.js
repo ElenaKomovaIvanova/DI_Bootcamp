@@ -1,4 +1,4 @@
-// script.js (Клиентская сторона)
+// scriptLogin.js (Клиентская сторона)
 import { fetchEmojis, getRandomEmojiAndIds } from './api.js'; 
 let score = 0;
 let currentUser = '';

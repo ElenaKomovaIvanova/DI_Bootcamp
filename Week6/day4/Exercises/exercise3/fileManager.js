@@ -11,16 +11,3 @@ const readFile = async (file) => {
     }
 };
 
-
-const writeFile = async (file, data) => {
-    fs.writeFile(file, data, function (err) {
-        if (err) {
-            console.log(err);
-        }
-        else {
-            console.log('Write operation complete.');
-        }
-    });
-}
-
-module.exports = { writeFile, readFile };
