@@ -1,0 +1,24 @@
+.app, .all{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.lan, .vot, button {
+  background-color: #efe586;
+}
+
+button {
+  border: none;
+}
+
+.one {
+  border: 3px solid green;
+  background-color: #efe586;
+  padding:20px;
+  margin:20px;
+  width: 20vw;
+}
+
