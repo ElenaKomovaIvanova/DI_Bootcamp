@@ -1,0 +1,71 @@
+
+div {
+  display: block;
+  unicode-bidi: isolate;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  transition: background-color 1s, opacity 1s;
+  opacity: 0.8;
+}
+
+@keyframes slidein {
+  0% {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+#root{
+  width:80%;
+  margin: 0 10%;
+}
+
+#conteiner {
+  height: auto;
+  width: 100%;
+  text-align: right;
+  max-width: 35rem;
+  margin: 100px auto 0;
+}
+
+#quote {
+  opacity: 0;
+  margin: 20px;
+  text-align: left;
+  animation: slidein 1s ease-out forwards;
+}
+
+#autor {
+  opacity: 0;
+  margin: 20px;
+  font-style: italic;
+  animation: slidein 1s ease-out forwards;
+}
+
+button {
+  opacity: 0;
+  margin: 20px;
+  position: relative;
+  border-radius: 5px;
+  height: 35px;
+  width: 100px;
+  font-weight: 700;
+  font-family: "Segoe UI", "Tahoma", "Geneva", "Verdana", sans-serif;
+  color: white;
+  cursor: pointer;
+  animation: slidein 1s ease-out forwards;
+}
+#quotesConteiner {
+  display: block;
+  background-color: white;
+  border: 1px rgb(145, 126, 126) solid;
+  border-radius: 10px;
+}
+
